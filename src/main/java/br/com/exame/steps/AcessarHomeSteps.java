@@ -13,22 +13,22 @@ import cucumber.api.java.pt.Entao;
 
 public class AcessarHomeSteps {
 	
-	PDFGenerator pdfgenerator = new PDFGenerator();
+	//PDFGenerator pdfgenerator = new PDFGenerator();
 	private String baseUrl = "https://exame.abril.com.br/";
-	Utils util = new Utils();
-	YamlHelper YamlHelper = new YamlHelper();
+	//Utils util = new Utils();
+	//YamlHelper YamlHelper = new YamlHelper();
 	
 	@Before(value = "@chrome", order = 1)
 	public void before(Scenario cenario) throws Exception {
 		DriverFactory.getDriver(TipoDriver.CHROME).navigate().to("https://exame.abril.com.br/");
 		
-		pdfgenerator.iniciaPDF(cenario);
+		//pdfgenerator.iniciaPDF(cenario);
 	}
 
 	@After(value = "@chrome", order = 1)
 	public void finalizaPDF(Scenario scenario) throws Exception {
 		
-		pdfgenerator.fechaPDF(scenario);
+		//pdfgenerator.fechaPDF(scenario);
 	}
 
 	@Dado("^que o usuario acessa a home no chrome$")
@@ -36,13 +36,16 @@ public class AcessarHomeSteps {
 	
 	
 	
-	pdfgenerator.conteudoPDF("que_o_usuario_acessa_a_home_no_chrome: "+ baseUrl);
+	//pdfgenerator.conteudoPDF("que_o_usuario_acessa_a_home_no_chrome: "+ baseUrl);
+		System.out.println("^que o usuario acessa a home no chrome$");
 	
 	}
 
 	@Entao("^a home e acessada com sucesso no respectivo navegador$")
 	public void a_home_e_acessada_com_sucesso_no_respectivo_navegador() throws Throwable {
-	pdfgenerator.conteudoPDF("a_home_e_acessada_com_sucesso_no_respectivo_navegador");
+	//pdfgenerator.conteudoPDF("a_home_e_acessada_com_sucesso_no_respectivo_navegador");
+		
+		System.out.println("a_home_e_acessada_com_sucesso_no_respectivo_navegador");
 	
 	}
 }
