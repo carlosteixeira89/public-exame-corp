@@ -34,7 +34,7 @@ public class DriverFactory {
 			//System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe");
 			//System.getProperty("//home//runner//work//exame-automacao-testes-front//exame-automacao-testes-front//src//main//resources//chromedriver");
 			
-			System.getProperty("user.dir") + "/src/main/resources/chromedriver");
+			System.getProperty("user.dir") + "/usr/local/bin/chromedriver");
 			
 			
 			
