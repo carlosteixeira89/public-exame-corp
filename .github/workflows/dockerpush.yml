@@ -71,5 +71,8 @@ jobs:
 
           docker tag image $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
+      - name: setup-chromedriver
+        uses: nanasess/setup-chromedriver@v1.0.1
+             
       - name: Maven build 
         run: mvn test
