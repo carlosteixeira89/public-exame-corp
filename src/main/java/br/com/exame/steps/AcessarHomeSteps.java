@@ -20,7 +20,7 @@ public class AcessarHomeSteps {
 	
 	@Before(value = "@chrome", order = 1)
 	public void before(Scenario cenario) throws Exception {
-		DriverFactory.getDriver(TipoDriver.CHROME).navigate().to(YamlHelper.getAtributo("env","uat").toString());
+		DriverFactory.getDriver(TipoDriver.CHROME).navigate().to("https://exame.abril.com.br/");
 		
 		pdfgenerator.iniciaPDF(cenario);
 	}
