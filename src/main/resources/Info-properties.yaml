@@ -1,0 +1,22 @@
+#Ambientes
+env:
+   dev: 
+   uat: https://exame.abril.com.br/
+   hom: https://www.google.com.br/
+
+#Nomes-Ambiente
+nome-env:
+   dev: dev
+   uat: uat
+   hom: hom
+#Diretorios
+paths:
+   report: C:\Users\carlosteixeira\Documents\Exame\QA\Automacao\Front\exame-automacao-front-end\src\main\report\extent-config.xml
+   imagem: .//src//main//report//Evidence.jpg
+   extentreport: .//src//main//report//extent-config.xml
+ 
+#Drivers
+drivers:
+   chrome: /src/main/resources/chromedriver.exe
+
+ 
