@@ -12,7 +12,7 @@ nome-env:
 #Diretorios
 paths:
    report: C:\Users\carlosteixeira\Documents\Exame\QA\Automacao\Front\exame-automacao-front-end\src\main\report\extent-config.xml
-   imagem: .//src//main//report//Evidence.jpg
+   imagem: ./src/main/report/Evidence.jpg
    extentreport: .//src//main//report//extent-config.xml
  
 #Drivers

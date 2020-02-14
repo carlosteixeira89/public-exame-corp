@@ -12,7 +12,10 @@ public class YamlHelper {
 	public Object getAtributo(String... param) throws Exception {
 		//String caminho = new File("src\\main\\resources").getAbsolutePath() + File.separator + "Info-properties.Yaml";
 
-		File file = new File("/home/runner/work/exame-automacao-testes-front/exame-automacao-testes-front/src/main/resources/Info-properties.Yaml");
+		//File file = new File("/home/runner/work/exame-automacao-testes-front/exame-automacao-testes-front/src/main/resources/Info-properties.Yaml");
+		
+		File file = new File("./src/main/resources/Info-properties.Yaml");
+		
 		InputStream input = new FileInputStream(file);
 		Map<?, ?> mapAux = (Map<?, ?>) new Yaml().load(input);
 		if (mapAux == null) {
