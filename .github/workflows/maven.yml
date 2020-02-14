@@ -13,14 +13,20 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-        
-    - name: setup-chromedriver
-      uses: nanasess/setup-chromedriver@v1.0.1
-    - name: copy file
-      uses: actions/checkout@v2
+    - name: setup chromedriver    
+    - uses: actions/setup-java@v1
       with:
-        source: "tests/a.txt"
-        target: "test-a.txt"
+        # Optional: do not specify to match Chrome's version
+        chromedriver-version: '77.0.3865.40'
+    - run: |
+          export DISPLAY=:99
+          chromedriver --url-base=/wd/hub &
+          
+    - name: copy file
+      uses: actions/setup-java@v1
+      with:
+        source: "/home/runner/work/setup-chromedriver/setup-chromedriver"
+        target: "/home/runner/work/exame-automacao-testes-front/exame-automacao-testes-front/src/main/resources/"
     
     - name: Build with Maven
       run: mvn test
