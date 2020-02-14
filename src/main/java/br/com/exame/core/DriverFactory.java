@@ -31,7 +31,7 @@ public class DriverFactory {
 			break;
 		case CHROME:
 			System.setProperty("webdriver.chrome.driver",
-			System.getProperty("user.dir") + "./src/main/resources/chromedriver.exe");
+			System.getProperty("user.dir") + "./src/main/resources/chromedriver");
 			//System.getProperty("//home//runner//work//exame-automacao-testes-front//exame-automacao-testes-front//src//main//resources//chromedriver");
 			
 			//System.getProperty(("") +"/home/runner/work/_actions/nanasess/setup-chromedriver/v1.0.1/lib/setup-chromedriver.sh"));
