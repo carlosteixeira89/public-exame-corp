@@ -6,11 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-
-    - run: npm ci
-    - run: npm run build
-    - run: npm test
-    - uses: ./
       with:
         chromedriver-version: '77.0.3865.40'
     - name: setup
@@ -18,18 +13,12 @@ jobs:
         sudo pip3 install selenium
         export DISPLAY=:99
         chromedriver --url-base=/wd/hub &
-        sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # disable headless mode
         python3 $GITHUB_WORKSPACE/__tests__/chromedriver.py
 
   test_default_version:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-
-    - run: npm ci
-    - run: npm run build
-    - run: npm test
-    - uses: ./
     - name: setup
       run: |
         sudo pip3 install selenium
@@ -37,3 +26,6 @@ jobs:
         chromedriver --url-base=/wd/hub &
         sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # disable headless mode
         python3 $GITHUB_WORKSPACE/__tests__/chromedriver.py
+    - name: maven build
+      run: |
+        mvn test
