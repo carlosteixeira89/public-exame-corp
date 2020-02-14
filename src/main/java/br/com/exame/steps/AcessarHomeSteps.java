@@ -1,10 +1,13 @@
 package br.com.exame.steps;
 
+import java.io.IOException;
+
 import br.com.exame.core.DriverFactory;
 import br.com.exame.core.PDFGenerator;
 import br.com.exame.core.TipoDriver;
 import br.com.exame.core.Utils;
 import br.com.exame.core.YamlHelper;
+import br.com.exame.functionalities.HomePageFunctionality;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -17,6 +20,11 @@ public class AcessarHomeSteps {
 	private String baseUrl = "https://exame.abril.com.br/";
 	Utils util = new Utils();
 	YamlHelper YamlHelper = new YamlHelper();
+	
+	public AcessarHomeSteps() throws IOException {
+		// TODO Auto-generated constructor stub
+		 	
+	}
 	
 	@Before(value = "@chrome", order = 1)
 	public void before(Scenario cenario) throws Exception {
