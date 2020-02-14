@@ -31,7 +31,7 @@ public class HomeSteps {
 	public void before(Scenario cenario) throws Exception {
 		DriverFactory.getDriver(TipoDriver.CHROME).navigate().to("https://www.exame.com.br");
 		
-		pdfgenerator.iniciaPDF(cenario);
+		//pdfgenerator.iniciaPDF(cenario);
 	}
 
 	@After(value = "@pesquisa", order = 1)
