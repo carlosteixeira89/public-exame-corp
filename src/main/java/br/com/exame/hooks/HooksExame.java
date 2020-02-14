@@ -19,8 +19,7 @@ import cucumber.api.java.After;
 
 public class HooksExame {
 
-	PDFGenerator pdfgenerator;
-	YamlHelper yamlhelper = new YamlHelper();
+	
 
 	
 	@Before

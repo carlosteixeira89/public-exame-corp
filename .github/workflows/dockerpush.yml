@@ -71,3 +71,14 @@ jobs:
 
           docker tag image $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
+      - name: setup-chromedriver
+        uses: nanasess/setup-chromedriver@v1.0.1
+        
+      - name: copy file
+        uses: nanasess/setup-chromedriver@v1.0.1
+        with:
+            source: "/home/runner/work/setup-chromedriver/setup-chromedriver"
+            target: "/home/runner/work/public-exame-corp/public-exame-corp/src/main/resources"
+             
+      - name: Maven build 
+        run: mvn test

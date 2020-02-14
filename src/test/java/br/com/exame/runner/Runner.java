@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 		                  "br.com.exame.hooks"}, 
                  features = {"src/main/java/br/com/exame/feature" }, 
                 		 plugin = {  "pretty", "html:target/cucumber-reports" }, 
-                 tags = { "@pesquisa" })
+                 tags = { "@chrome"})
 public class Runner {
 // plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
 }

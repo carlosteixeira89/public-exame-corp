@@ -24,23 +24,20 @@ public class HomeSteps {
 		 	homepagefunctionality = new HomePageFunctionality();
 	}
 	
-	PDFGenerator pdfgenerator = new PDFGenerator();
 	
-	Utils util = new Utils();
-	YamlHelper YamlHelper = new YamlHelper();
 	
 	
 	@Before(value = "@pesquisa", order = 1)
 	public void before(Scenario cenario) throws Exception {
-		DriverFactory.getDriver(TipoDriver.CHROME).navigate().to(YamlHelper.getAtributo("env","uat").toString());
+		DriverFactory.getDriver(TipoDriver.CHROME).navigate().to("https://www.exame.com.br");
 		
-		pdfgenerator.iniciaPDF(cenario);
+		//pdfgenerator.iniciaPDF(cenario);
 	}
 
 	@After(value = "@pesquisa", order = 1)
 	public void finalizaPDF(Scenario scenario) throws Exception {
 		
-		pdfgenerator.fechaPDF(scenario);
+		//pdfgenerator.fechaPDF(scenario);
 	}
 	
 	
@@ -48,7 +45,7 @@ public class HomeSteps {
 	public void que_o_usuario_acessa_a_home_page() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		
-		pdfgenerator.conteudoPDF("que_o_usuario_acessa_a_home_page: "+ YamlHelper.getAtributo("env","uat").toString());
+		//pdfgenerator.conteudoPDF("que_o_usuario_acessa_a_home_page: "+ YamlHelper.getAtributo("env","uat").toString());
 	  
 	}
 
@@ -57,7 +54,7 @@ public class HomeSteps {
 	    // Write code here that turns the phrase above into concrete actions
 		
 		homepagefunctionality.clicarBotaoPesquisa();
-		pdfgenerator.conteudoPDF("realizada_uma_busca_por:");
+		//pdfgenerator.conteudoPDF("realizada_uma_busca_por:");
 		
 		homepagefunctionality.escreverTextoPesquisa(arg1);
 		
@@ -69,8 +66,8 @@ public class HomeSteps {
 	public void a_pesquisa_realizada_com_sucess() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		
-		pdfgenerator.conteudoPDF("a_pesquisa_realizada_com_sucess: ");
-		
+		//pdfgenerator.conteudoPDF("a_pesquisa_realizada_com_sucess: ");
+	
 		Assert.assertTrue(homepagefunctionality.validarPesquisa("Bolsa"));
 	   
 	}
