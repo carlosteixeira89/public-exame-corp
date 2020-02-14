@@ -36,7 +36,7 @@ public class DriverFactory {
 			
 			//System.getProperty("/home/runner/work/public-exame-corp/public-exame-corp/src/main/resources/chromedriver");
 			//System.getProperty("user.dir") + "/_actions/nanasess/setup-chromedriver/v1.0.1/lib/setup-chromedriver.sh");
-				System.getProperty(("")+"/home/runner/work/_actions/nanasess/setup-chromedriver/v1.0.1/lib/chromedriver"));
+				System.getProperty(("user.dir")+"./src/main/resources/chromedriver"));
 			
 			
 			if (driver == null) {
